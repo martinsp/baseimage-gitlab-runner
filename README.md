@@ -17,11 +17,11 @@ docker run -d --name baseimage-gitlab-runner \
   --restart always \
   -v $HOME/baseimage-runner/config:/etc/gitlab-runner \
   -v /var/run/docker.sock:/var/run/docker.sock \
-  baseimage-runner
+  baseimage-gitlab-runner
 ```
 
 ## Registering runner with GitLab ci
 
 ```shell
-docker exec -it baseimage-runner gitlab-runner register
+docker exec -it baseimage-gitlab-runner gitlab-runner register
 ```
